@@ -204,6 +204,133 @@ Example:
 Gray Code is cyclic because the last and first values also differ by only one bit.
 
 ---
+---
+
+## Gray Code
+
+Gray Code is a binary numbering system where two consecutive values differ by only one bit.
+
+This helps reduce errors during transitions in digital systems.
+
+---
+
+## Binary to Gray Code Conversion
+
+### Rules
+
+1. The MSB of Gray Code is the same as the MSB of Binary.
+2. Each next Gray bit is found by XORing adjacent Binary bits.
+
+### Formula
+
+If Binary = B3 B2 B1 B0
+
+Then Gray = G3 G2 G1 G0
+
+G3 = B3  
+G2 = B3 ⊕ B2  
+G1 = B2 ⊕ B1  
+G0 = B1 ⊕ B0  
+
+### Example
+
+Binary:
+
+1011
+
+Conversion:
+
+G3 = 1  
+G2 = 1 ⊕ 0 = 1  
+G1 = 0 ⊕ 1 = 1  
+G0 = 1 ⊕ 1 = 0  
+
+Gray Code:
+
+1110
+
+So:
+
+1011₂ = 1110 Gray
+
+---
+
+## Gray Code to Binary Conversion
+
+### Rules
+
+1. The MSB of Binary is the same as the MSB of Gray.
+2. Each next Binary bit is found by XORing the previous Binary bit with the current Gray bit.
+
+### Formula
+
+If Gray = G3 G2 G1 G0
+
+Then Binary = B3 B2 B1 B0
+
+B3 = G3  
+B2 = B3 ⊕ G2  
+B1 = B2 ⊕ G1  
+B0 = B1 ⊕ G0  
+
+### Example
+
+Gray Code:
+
+1110
+
+Conversion:
+
+B3 = 1  
+B2 = 1 ⊕ 1 = 0  
+B1 = 0 ⊕ 1 = 1  
+B0 = 1 ⊕ 0 = 1  
+
+Binary:
+
+1011
+
+So:
+
+1110 Gray = 1011₂
+
+---
+
+## Importance of Gray Code
+
+Gray Code is important because only one bit changes between consecutive values.
+
+This reduces transition errors in digital systems.
+
+---
+
+## Applications of Gray Code
+
+- Rotary Encoders
+- Position Sensors
+- Digital Communication
+- FSM State Encoding
+- Error Reduction in Digital Circuits
+
+---
+
+## Key Point
+
+Binary values may change multiple bits between consecutive numbers, but Gray Code changes only one bit.
+
+Example:
+
+Binary transition:
+
+011 → 100
+
+Here, 3 bits change.
+
+Gray Code transition:
+
+010 → 110
+
+Here, only 1 bit changes.
 
 ## Important Interview Questions
 
